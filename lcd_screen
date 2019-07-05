@@ -1,0 +1,5 @@
+## Set up the LCD Screen under Arch
+su
+echo "options fbtft_device name=hktft9340 busnum=1 rotate=270" > /etc/modprobe.d/cloudshell.conf
+echo "spi_s3c64xx" >> /etc/modules-load.d/fbtft_device.conf
+echo "fbtft_device" >> /etc/modules-load.d/fbtft_device.conf
