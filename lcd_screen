@@ -15,3 +15,24 @@ echo "COMPLETE"
 su
 modprobe fbtft_device name=hktft9340 busnum=1 rotate=270
 # The screen should be alive now
+#
+# Install NMON
+git clone https://github.com/DaveBurkhardt/cloudshell-nmon
+#pacman -Syu base-devel
+# need to manually build the thing now
+#1) copy the font file (miniwi-8.psf.gz) into /usr/share/consolefonts
+     $sudo cp miniwi-8.psf.gz /usr/share/consolefonts
+#2) Make nmon-xu4 binary executable (skip if you compiled yourself)
+     $sudo chmod 755 nmon-xu4
+#3) copy nmon-xu4 binary to /usr/local/bin
+     $sudo cp nmon-xu4 /usr/local/bin
+#4) Make the shell script executable
+     $sudo chmod 755 cloudshell-nmon
+#5) Copy cloudshell-nmon script to /usr/local/bin
+     $sudo cp cloudshell-nmon /usr/local/bin
+#6) Add the shell script to your startup (universal way)
+   Edit /etc/rc.local and add the following line to the end
+     /usr/local/bin/cloudshell-nmon&
+#
+#
+     
