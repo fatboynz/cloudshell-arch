@@ -1,0 +1,9 @@
+# RAID
+dd if=/dev/zero of=/dev/sda bs=512 count=1
+mkfs.ext4 /dev/sda
+
+# PM MODE
+dd if=/dev/zero of=/dev/sda bs=512 count=1
+mkfs.ext4 /dev/sda
+dd if=/dev/zero of=/dev/sdb bs=512 count=1
+mkfs.ext4 /dev/sdb
