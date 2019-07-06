@@ -24,14 +24,12 @@ pacman -Syu ncurses core-utils nmon
 # need to manually build the thing now
 sudo cp miniwi-8.psf.gz /usr/share/fonts
 sudo cp cloudshell-nmon /usr/local/bin
-# update the environment
-# update the tty to
-   Edit /etc/rc.local and add the following line to the end
-     /usr/local/bin/cloudshell-nmon&
-# update the cloudshell-nmon scirpt to point to the right place 
-# Let’s create a file called /etc/systemd/system/rot13.service:
+# update the NMON environment variables
+# update the cloudshell-nmon script to point to the right place
+##
+# Let’s create a file called /etc/systemd/system/nmon.service:
 [Unit]
-Description=ROT13 demo service
+Description=nmon
 After=network.target
 StartLimitIntervalSec=0
 [Service]
@@ -39,7 +37,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=centos
-ExecStart=/usr/bin/env php /path/to/server.php
+ExecStart=/usr/local/bin/cloudshell-nmon
 [Install]
 WantedBy=multi-user.target
      
