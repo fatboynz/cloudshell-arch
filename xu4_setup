@@ -1,0 +1,6 @@
+# sort out termite
+# update /etc/pacman.d/mirrorlist
+pacman -Sy termite-terminfo
+# Update locale
+nano /etc/locale.gen
+localectl set-locale LANG=en_NZ.UTF-8
