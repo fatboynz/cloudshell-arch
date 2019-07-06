@@ -1,4 +1,5 @@
 #!/bin/bash
+# make sure you have i2c-tools installed
 REFRESH="1"
 DISK_TEMP_THRESHOLD="45"
 CPU_TEMP_THRESHOLD="60"
