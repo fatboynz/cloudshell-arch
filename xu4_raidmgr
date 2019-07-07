@@ -1,0 +1,27 @@
+root@odroidxu4:~# ./raidmgr_static 
+ 
+JMS56X HW RAID Manager V8.0.0.1
+(C) 2008~2011 JMicron Tech, Corp. Command Line Interface RAID Manager For JMS56X.
+ 
+JMS56X>   
+ 
+Valid commands set are:
+=======================
+ 
+ GC ------------------------------------- Get avail JMS56X
+ DC C[n] -------------------------------- Display controller info
+ SR C[n] -------------------------------- Show avail RAID info
+ SS C[n] -------------------------------- Show avail SATA info
+ SM C[n] D[n] --------------------------- Show disk S.M.A.R.T. info
+ CR C[n] D[0,..,2] R0|R1|JBOD ----------- Create RAID
+ DR C[n] R[n] --------------------------- Delete RAID
+ SF C[n] -------------------------------- Show firmware version
+ SA C[n] -------------------------------- Set alarm mute
+ GR C[n] R[n] --------------------------- Get rebuilding percentage
+ ID C[n] D[n] --------------------------- Identify disk
+ ST C[n] R[n] timer --------------------- Set standby timer
+ AS C[n] D[n] R[n] ---------------------- Add spare disk
+ DS C[n] D[n] R[n] ---------------------- Delete spare disk
+ EX ------------------------------------- Exit
+ 
+JMS56X>
