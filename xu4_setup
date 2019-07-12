@@ -1,10 +1,20 @@
 # sort out termite
-# update /etc/pacman.d/mirrorlist
 pacman -Sy termite-terminfo
+# update /etc/pacman.d/mirrorlist - set to sydney
+nano /etc/pacman.d/mirrorlist
 # Update locale
 nano /etc/locale.gen
 localectl set-locale LANG=en_NZ.UTF-8
+reboot
+# update the standard passswords
 #
 # NFS mounts all messed up
+pacman -Syu nfs-utils
+nano /etc exportsfs
 / 192.168.1.0/24(rw,fsid=root,no_root_squash,no_subtree_check)
 #
+pacman -Syu sudo nfs-utils git
+# adduser
+useradd -m jdip
+# setup sudo
+nano /etc/sudoers
