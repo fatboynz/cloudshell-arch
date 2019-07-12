@@ -1,0 +1,4 @@
+# quick set up
+# set to raid1 - full mirroring
+mdadm --misc --zero-superblock /dev/sda
+mdadm --misc --zero-superblock /dev/sdb
