@@ -27,3 +27,6 @@ Valid commands set are:
  EX ------------------------------------- Exit
  
 JMS56X>
+CR C0 D0,1 R1
+mkfs.ext4 /dev/sda
+# done
