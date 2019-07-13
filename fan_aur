@@ -1,0 +1,5 @@
+# cloudshell2-fan 1.1.1-2
+# https://aur.archlinux.org/packages/cloudshell2-fan/
+git clone https://aur.archlinux.org/cloudshell2-fan.git
+pacman -Syu i2c-tools python python-systemd smartmontools
+makepkg -si
