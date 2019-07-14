@@ -1,0 +1,6 @@
+# Install termite
+wget https://raw.githubusercontent.com/thestinger/termite/master/termite.terminfo
+tic -x termite.terminfo
+# Arch
+pacman -S termite-terminfo
+#
